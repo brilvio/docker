@@ -29,3 +29,10 @@ services:
       - "8971:8971"
       - "8555:8555/tcp"
       - "8555:8555/udp"
+    networks:
+      - default
+      - proxy_network
+
+networks:
+  proxy_network:
+    external: true

@@ -12,3 +12,10 @@ services:
       - ./letsencrypt:/etc/letsencrypt
     environment:
       - DISABLE_IPV6=true
+    networks:
+      - default
+      - proxy_network
+
+networks:
+  proxy_network:
+    external: true
